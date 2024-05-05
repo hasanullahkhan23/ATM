@@ -21,7 +21,7 @@ if (answer.pin === myPin) {
         let amountAns = await inquirer.prompt([
             {
                 name: "amount",
-                message: "enter your amout",
+                message: "enter your amount",
                 type: "number"
             }
         ]);
@@ -30,11 +30,11 @@ if (answer.pin === myPin) {
         }
         else {
             myBalance -= amountAns.amount;
-            console.log("Your remaing balance is:" + `${myBalance}`);
+            console.log("Your remaining balance is:" + `${myBalance}`);
         }
     }
     if (operationAns.operation === "fast cash") {
-        let fashcashAns = await inquirer.prompt([
+        let fastcashAns = await inquirer.prompt([
             {
                 name: "fastcash",
                 message: "Select your amount",
@@ -42,8 +42,8 @@ if (answer.pin === myPin) {
                 choices: [500, 1000, 2000, 5000]
             }
         ]);
-        myBalance -= fashcashAns.fastcash;
-        console.log("Your remaing balance is:" + `${myBalance}`);
+        myBalance -= fastcashAns.fastcash;
+        console.log("Your remaining balance is:" + `${myBalance}`);
     }
     else if (operationAns.operation === "check balance") {
         console.log("Your balance is:" + `${myBalance}`);
